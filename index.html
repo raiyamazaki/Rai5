@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me - Interactive Intro</title>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HERO SECTION -->
+<section class="section hero" id="hero">
+  <h2>
+    Hi, I’m <strong>Raiver</strong>.<br>
+    Welcome to my interactive introduction.
+  </h2>
+  <a href="#personal" class="btn">Start</a>
+</section>
+
+<!-- PERSONAL INFO -->
+<section class="section light" id="personal">
+  <h2>Personal Info</h2>
+  <p>
+    I’m <strong>20 years old</strong> and currently living in <strong>Ilocos Norte</strong>.<br>
+    I’m pursuing a <strong>BA in Communications</strong> and I’m in my <strong>first year</strong>.
+  </p>
+  <a href="#content" class="btn">Next</a>
+</section>
+
+<!-- CONTENT CREATION -->
+<section class="section" id="content">
+  <h2>Content Creation</h2>
+  <p>
+    I love creating digital content because it lets me tell stories and share ideas in ways words alone can’t. It challenges me creatively and technically, and every project is a chance to connect with people and inspire them. For me, digital content isn’t just a hobby, it’s a way to communicate, inspire, and leave a mark in a medium that’s constantly evolving.
+  </p>
+  <div class="section-images">
+    <img src="images/content.jpg" alt="Content Creation" loading="lazy" decoding="async">
+  </div>
+  <a href="#tech" class="btn">Next</a>
+</section>
+
+<!-- TECH & GADGETS -->
+<section class="section light" id="tech">
+  <h2>Tech & Gadgets</h2>
+  <p>
+    I’m fascinated by technology and new gadgets because they’re constantly changing the way we live, create, and connect. Exploring them feels like discovering the future firsthand, and experimenting with the latest tools pushes me to learn, adapt, and think creatively. Technology isn’t just interesting it’s inspiring.
+  </p>
+  <div class="section-images">
+    <img src="images/tech.jpg" alt="Tech & Gadgets" loading="lazy" decoding="async">
+  </div>
+  <a href="#music" class="btn">Next</a>
+</section>
+
+<!-- MUSIC SECTION -->
+<section class="section music-section" id="music">
+  <div class="music-bg"></div>
+
+  <!-- Wrapper for animations -->
+  <div class="music-animation-wrapper">
+    <!-- Extra text starts hidden, will fade in from left -->
+    <div class="music-extra-text" id="musicExtraText">
+      <p>
+        I love “Slow Dancing in a Burning Room” because it captures that bittersweet ache of life and love, the moments you hold onto even when you know they’re slipping away. Every note feels like vulnerability made sound, reminding me that the beauty of life is in feeling deeply, even when it hurts. It’s a song that makes me pause, reflect, and embrace the fragility of every connection and moment.
+      </p>
+    </div>
+
+    <!-- Music box starts centered, will slide right on play -->
+    <div class="music-player" id="musicPlayer">
+      <img src="images/album.jpg" alt="Album Cover" class="album-cover">
+
+      <div class="music-text">
+        <h3 class="song-title">Slow Dancing in a Burning Room</h3>
+        <p class="artist-name">John Mayer</p>
+      </div>
+
+      <!-- Music Progress -->
+      <div class="music-progress">
+        <span id="currentTime">0:00</span>
+        <input type="range" id="progressBar" value="0" min="0" max="100">
+        <span id="durationTime">3:45</span>
+      </div>
+
+      <!-- Play Button -->
+      <button id="playPause" class="music-play">▶</button>
+    </div>
+  </div>
+
+  <!-- Next button centered below -->
+  <a href="#student" class="btn" id="musicNext">Next</a>
+
+  <video id="musicAudio" src="videos/song.mp4" preload="metadata"></video>
+</section>
+
+
+<!-- STUDENT LIFE -->
+<section class="section" id="student">
+  <h2>Student Life</h2>
+  <p>
+    Being a student shapes my day-to-day perspective because it constantly challenges me to balance learning, creativity, and growth. Every class, assignment, and project pushes me to think critically, manage my time, and see problems from different angles. It’s not just about academics it’s about learning how to navigate life and opportunities with curiosity and purpose.
+  </p>
+  <div class="section-images">
+    <img src="images/student.jpg" alt="Student Life" loading="lazy" decoding="async">
+  </div>
+  <a href="#photography" class="btn">Next</a>
+</section>
+
+<!-- PHOTOGRAPHY -->
+<section class="section light" id="photography">
+  <h2>Photography</h2>
+  <p>
+    Photography allows me to capture moments creatively, turning ordinary scenes into stories that speak without words. It challenges me to see the world from unique angles, play with light and perspective, and preserve memories in a way that’s both personal and expressive. Each shot is a chance to share how I see life.
+  </p>
+  <div class="section-images">
+    <img src="images/photography.jpg" alt="Photography" loading="lazy" decoding="async">
+  </div>
+  <a href="#partner" class="btn">Next</a>
+</section>
+
+<!-- PARTNER -->
+<section class="section partner-section" id="partner">
+  <h2>My Partner</h2>
+  <p>And I have a beautiful, supportive, and understanding partner.</p>
+  <div class="section-images">
+    <img src="images/partner.jpg" alt="My Partner" loading="lazy" decoding="async">
+  </div>
+  <a href="#closing" class="btn partner-btn">Next</a>
+  <div class="hearts-container"></div>
+</section>
+
+<!-- CLOSING -->
+<section class="section hero light" id="closing">
+  <div class="section-images">
+    <img src="images/self.jpg" alt="Self Portrait" loading="lazy" decoding="async">
+  </div>
+  <h2>Thank You</h2>
+  <p>
+    That’s me in a few snapshots of my interests.
+  </p>
+  <a href="#hero" class="btn">Restart</a>
+</section>
+
+<script src="music.js"></script>
+</body>
+</html>
